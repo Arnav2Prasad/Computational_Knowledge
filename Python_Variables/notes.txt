@@ -1,0 +1,70 @@
+https://medium.com/@AlexanderObregon/the-simple-beginners-guide-to-python-variables-0afe16067b79
+
+---------------------------------------
+ Variable names are case-sensitive (age, Age, and AGE are three different variables).
+
+    Variables are names that point or refer to objects.
+    A reference can be seen as the connection between a variable/name and a value, it contains the memory address where the value is held.
+    A value is another word for the actual data or object.
+
+Okay, but why all this complexity? 
+Why not see everything as the same thing, i.e. a variable is a value and not bother with all of this? 
+The reason is that multiple variables can point to the same value. T
+his means that if you change one of the variables then the value of all variables will change 
+or (rather the value the variables point to). This is very important to understand otherwise your programs 
+will behave unexpectedly.
+
+
+------------------------------------------------------------------------
+
+                              Beginner’s Guide to Python Variables
+
+Python is dynamically typed, which means you don’t have to explicitly declare the type of data a variable will hold. 
+This feature makes Python very user-friendly and a great language for beginners. When you create a variable in Python, 
+you’re essentially instructing Python to allocate space in memory for the value that will be stored in 
+that variable. The variable then acts as a reference to that value.
+
+    Variable names should start with a letter or an underscore.
+    Variable names cannot start with a number.
+    Variable names can only contain alpha-numeric characters and underscores (A-z, 0–9, and _ ).
+    Variable names are case-sensitive (age, Age, and AGE are three different variables).
+    Avoid using Python’s keyword as variable names, such as if, while, class, etc., as this can lead to unexpected behavior in your programs.
+
+
+Dynamic typing remains a powerful feature of Python, allowing for rapid development and code flexibility. 
+However, with great power comes great responsibility — ensure you’re mindful of your variables’ types, 
+especially when your program’s complexity increases.
+
+
+---------------------------------------------------------------------------
+
+    Variables are names that point or refer to objects.
+    A reference can be seen as the connection between a variable/name and a value, it contains the memory address where the value is held.
+    A value is another word for the actual data or object.
+
+Okay, but why all this complexity? 
+Why not see everything as the same thing, i.e. a variable is a value and not bother with all of this? 
+The reason is that multiple variables can point to the same value. T
+his means that if you change one of the variables then the value of all variables will change 
+or (rather the value the variables point to). This is very important to understand otherwise your programs 
+will behave unexpectedly. Let’s illustrate these concepts with an example:
+                
+                # a is a variable
+                # { "x": 5 } is a value
+                # in the assignment a points to { "x": 5 }
+                a = { "x": 5 }
+                # now let's assign the value a points to to another variable
+                b = a
+                # now both a and b point to the same value
+                # what happens if we change it?
+                b["x"] = 6
+                # the one value both variables point to change
+                # the variables are equal!
+                assert a == b
+                print(a) # => {'x': 6}
+
+
+
+
+
+
